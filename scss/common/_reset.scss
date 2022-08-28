@@ -1,0 +1,36 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  outline: none;
+  line-height: 1.4;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  // display: block;
+  vertical-align: top;
+}
+a {
+  text-decoration: none;
+}
+ul, li, ol {
+  list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+html, body {
+  height: 100%;
+}
+
+
+
+
+// @media (any-hover: hover) {
+//   &:hover {
+
+//   }
+// }

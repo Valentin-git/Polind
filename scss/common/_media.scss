@@ -1,0 +1,110 @@
+//------------------------------- MAX-WIDTH 1700 ---------------------//
+@media (max-width: 1700px) {
+  
+}
+//------------------------------- MAX-WIDTH 1600 ---------------------//
+@media (max-width: 1600px) {
+  
+}
+//------------------------------- MAX-WIDTH 1570 ---------------------//
+@media (max-width: 1570px) {
+  
+}
+//------------------------------- MAX-WIDTH 1500 ---------------------//
+@media (max-width: 1500px) { 
+  
+}
+//------------------------------- MAX-WIDTH 1399.99 desktops ---------//
+@media (max-width: 1399.99px) {
+  
+}
+//------------------------------- MAX-WIDTH 1199.98 -----------------//
+@media (max-width: 1199.98px) {
+  .search-form {
+    &__input {
+      width: 95%;
+    }
+  }
+}
+//------------------------------- MAX-WIDTH 990.98 tablets ----------//
+@media (max-width: $tablet) {
+  .city-card {
+    &__item {
+      width: 48%;
+    }
+  }
+  .explore-city {
+    flex-direction: column-reverse;
+    &__item {
+      width: 100%;
+    }
+  }
+  // @media (any-hover: hover) {
+  //   &:hover {
+  //     .explore-city__picture {
+  //       img {
+  //         &:hover {
+  //           transform: translate3d(-46px, -52px, 0);
+  //           transition: transform .5s linear;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+}
+//------------------------------- MAX-WIDTH 885 ---------------------//
+@media (max-width: 885px) {
+  
+}
+//------------------------------- MAX-WIDTH 841 ---------------------//
+@media (max-width: 842px) {
+  
+}
+//------------------------------- MAX-WIDTH 767.98 landscape phones ---------------------//
+@media (max-width: $mobile) {
+  .menu-nav {
+    display: none;
+  }
+  .mobil-menu {
+    display: block;
+  }
+  .intro {
+    &__content {
+      padding-top: 240px;
+    }
+  }
+}
+@media (max-width: 646px) {
+  .search-form {
+    &__input {
+      width: 93%;
+    }
+  }
+}
+//------------------------------- MAX-WIDTH 575.98 portrait phones ---------------------//
+@media (max-width: 575.98px) {
+  .intro {
+    &__content {
+      padding-top: 190px;
+    }
+  }
+  .search-form {
+    width: 100%;
+    &__input {
+
+    }
+  }
+  .city-card {
+    &__item {
+      width: 100%;
+    }
+  }
+}
+//------------------------------- MAX-WIDTH 500 ---------------------//
+@media (max-width: 500px) {
+  
+}
+//------------------------------- MAX-WIDTH 418 ---------------------//
+@media (max-width: 418px) {
+  
+}

@@ -1,0 +1,102 @@
+//---------------------------------------- Settings --------------------------------------//
+// Минимальная ширина страницы
+$minWidth: 320;
+
+// Ширина полотна (макета)
+$maxWidth: 1920; 
+
+// Ширина ограничивающего контейнера (0 = нет ограничения)
+$maxWidthContainer: 1200px; // 1170 + padding 0 15px = 1200px
+
+// Ощий отступ у контейнера
+// (15px слева и справа, 0 = нет отсупа)
+$containerPadding: 15px;
+
+// Тип адаптива
+// 1 = отзывчивость (у контейнера не брейкпоинтов),
+// 2 = по брейк-поинтам (контейнер меняет свою ширину по брейк-поинтам)
+$responsiveType: 1;
+
+// Ширина срабатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Брейк-поинты
+$pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: 990.98px; // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: 767.98px; // Телефоны L
+$mobileSmall: 479.98px; // Телефоны S
+
+//
+// @if ($responsiveType==1) {
+//   // Отзывчивая
+//   [class*="container"] {
+//     @if ($maxWidthContainer>0) {
+//       max-width: rem($maxWidthContainer);
+//       box-sizing: border-box;
+//       margin: 0 auto;
+//     }
+//     @if ($containerPadding>0) {
+//       padding: 0 rem(math.div($containerPadding, 2));
+//     }
+//   }
+// } @else {
+//   // По брейк-поинтам
+//   [class*="container"] {
+//     margin: 0 auto;
+//     @if ($maxWidthContainer>0) {
+//       max-width: rem($maxWidthContainer);
+//       box-sizing: border-box;
+//     } @else {
+//         @if ($containerPadding>0) {
+//           padding: 0 rem(math.div($containerPadding, 2));
+//         }
+//     }
+//     @media (max-width: $pc) {
+//       max-width: rem(970);
+//     }
+//     @media (max-width: $tablet) {
+//       max-width: rem(750);
+//     }
+//     @media (max-width: $mobile) {
+//       max-width: none;
+//       @if ($containerPadding>0 and $maxWidthContainer>0) {
+//         padding: 0 rem(math.div($containerPadding, 2));
+//       }
+//     }
+//   }
+// }
+
+//---------------------------------------- Font/Size --------------------------------------//
+$fontFamily: "Montserrat"; // Шрифт по умолчанию
+// $fontSize: rem(14); // Размер шрифта по умолчанию
+
+//---------------------------------------- Colors -----------------------------------------//
+
+// цвет кнопок, иконки поиска, текста, рамки
+$accentColor: rgb(255, 199, 74);
+
+// цвет обычного текста, заголовков, кнопок
+$textColor: rgb(96, 111, 129);
+
+// цвет белый
+$whiteColor: rgb(255, 255, 255);
+
+//---------------------------------------- shadow ----------------------------------------//
+// поиск, карточка товара
+$shadowBlack: 0px 0px 85px 0px rgba(141, 148, 169, 0.15);
+
+
+// Как при помощи CSS обрезать длинный текст. Решение для однострочного текста
+// text-overflow: ellipsis; //образка длинных блоков с текстом
+// overflow: hidden; //прятать выходящий за пределы текст
+// width: 100%; //ширина блока с текстом
+// white-space: nowrap; //запрет на перенос текста
+
+// Как при помощи CSS обрезать длинный текст. Решение для многострочного текста
+  //   /*! autoprefixer: off */
+  //   display: -webkit-box;
+  //   -webkit-line-clamp: 2; // количество строк
+  //   -webkit-box-orient: vertical;
+  //   overflow: hidden;
+  // }
+  // /*! autoprefixer: on */

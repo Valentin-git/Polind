@@ -1,0 +1,21 @@
+.footer {
+  background: url(../img/footer/polind.png) no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 495px;
+
+  display: flex;
+  align-items: center;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__copyr {
+    color: $textColor;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+  }
+}

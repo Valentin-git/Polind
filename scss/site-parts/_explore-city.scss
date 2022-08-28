@@ -1,0 +1,69 @@
+.explore-city-block {
+  background: #f8f9fb;
+  position: relative;
+  padding-bottom: 90px;
+  &::before {
+    content: "";
+    background: url(../img/explore-city/san-bg.png) no-repeat;
+    background-position: right;
+    background-size: contain;
+    width: 100%;
+    height: 993px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+.explore-city-col {
+  position: relative;
+  &__title {
+    color: $textColor;
+    display: flex;
+    justify-content: center;
+    padding-top: 75px;
+    margin-bottom: 60px;
+    // font-size: 30px;
+    @include adaptiv(30, 20);
+    font-weight: 700;
+  }
+}
+.explore-city {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex: 0 0 50%;
+    &_pd {
+      padding-right: 37px;
+    }
+  }
+  &__picture {
+    border: 15px solid $accentColor;
+    img {
+      width: 100%;
+      transition: transform .5s linear;
+      &:hover {
+        transform: translate3d(-46px, -52px, 0);
+        transition: transform .5s linear;
+      }
+    }
+  }
+  &__title {
+    color: $accentColor;
+    margin-bottom: 35px;
+    // font-size: 36px;
+    @include adaptiv(36, 24);
+    font-weight: 700;
+  }
+  &__text {
+    color: $textColor;
+    margin-bottom: 50px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 2.143;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

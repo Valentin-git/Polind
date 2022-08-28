@@ -1,0 +1,106 @@
+@use 'sass:math';
+@import 'common/fonts';
+@import 'common/icons';
+@import 'common/reset';
+@import 'common/variable';
+@import 'common/mixins';
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+
+body {
+  font-size: 14px;
+  color: $textColor;
+  font-family: $fontFamily;
+
+}
+
+h1, h2, h3, h4 {
+  // color: $titleColor;
+}
+button {
+  border: 0;
+  cursor: pointer;
+}
+fieldset {
+  border: 0;
+}
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; // прижать футер
+}
+.page {
+  flex: 1 1 auto;
+}
+[class*="container"] {
+  max-width: $maxWidthContainer; 
+  margin: 0 auto;
+  padding: 0 $containerPadding;
+}
+@media (max-width: 1199.98px) {
+  [class*="container"] {
+    max-width: 970px;
+  }
+}
+@media (max-width: $tablet) {
+  [class*="container"] {
+    max-width: 750px;
+  }
+}
+@media (max-width: $mobile) {
+  [class*="container"] {
+    max-width: none;
+  }
+}
+.container-fluid {
+  max-width: 1841px;
+}
+// @media (min-width: 768px) {
+//   .container {
+//     max-width: 720px;
+//   }
+// }
+// @media (min-width: 992px) {
+//   .container {
+//     max-width: 960px;
+//   }
+// }
+// @media (min-width: 1200px) {
+//   .container {
+//     max-width: 1140px;
+//   }
+// }
+// @media (min-width: 1400px) {
+//   .container {
+//     max-width: 1320px;
+//   }
+// }
+
+.general-btn {
+  display: flex;
+  &__link {
+    display: block;
+    color: #b98000;
+    background: $accentColor;
+    padding: 17px 35px;
+
+    border-radius: 31px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    // transition: all 0.3s ease 0s;
+  }
+}
+
+
+
+
+@import 'site-parts/header';
+@import 'site-parts/intro';
+@import 'site-parts/where-want-go';
+@import 'site-parts/explore-city';
+@import 'site-parts/journey';
+@import 'site-parts/footer';
+@import 'common/media';

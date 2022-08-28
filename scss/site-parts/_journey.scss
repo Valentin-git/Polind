@@ -1,0 +1,43 @@
+.journey-block {
+  position: relative;
+  height: 642px;
+
+  display: flex;
+  align-items: center;
+  background: url(../img/journey/journey.jpg) no-repeat;
+  background-size: cover;
+    // width: 1920px;
+    // height: 642px;
+  // &::before {
+  //   content: "";
+  //   background: url(../img/journey/journey.jpg) no-repeat;
+  //   width: 1920px;
+  //   height: 642px;
+    
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  // }
+}
+.journey {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    color: $whiteColor;
+    margin-bottom: 20px;
+    // font-size: 92px;
+    @include adaptiv(92, 33);
+    font-weight: 700;
+    text-align: center;
+  }
+  &__text {
+    color: $whiteColor;
+    margin-top: 44px;
+  }
+  &__link {
+    color: $accentColor;
+    text-decoration: underline;
+  }
+}

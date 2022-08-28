@@ -523,8 +523,17 @@ circle {
   border-radius: 5px;
 }
 
+.city-card__picture {
+  overflow: hidden;
+}
+
 .city-card__picture img {
   width: 100%;
+  transition: transform 3s ease 0s;
+}
+
+.city-card__picture img:hover {
+  transform: scale(1.1);
 }
 
 .city-card__content {

@@ -52,6 +52,28 @@
   //   }
   // }
 }
+// @media (hover: none) {
+//   .explore-city__picture {
+//     img {
+//       &:hover {
+//         transform: translate3d(-46px, -52px, 0);
+//         transition: transform .5s linear;
+//       }
+//     }
+//   }
+// }
+  // @media (any-hover: hover) {
+  //   &:hover {
+  //     .explore-city__picture {
+  //       img {
+  //         &:hover {
+  //           transform: translate3d(-46px, -52px, 0);
+  //           transition: transform .5s linear;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 //------------------------------- MAX-WIDTH 885 ---------------------//
 @media (max-width: 885px) {
   

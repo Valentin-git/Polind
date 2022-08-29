@@ -65,11 +65,27 @@
   justify-content: space-between;
   column-gap: 28px;
   &__item {
+    transition: transform 3s ease 0s;
     position: relative;
+    &:hover .popular-places-col__content .popular-places-col__title {
+      font-size: 48px;
+    }
+    &:hover .popular-places-col__content {
+      transition: transform 3s ease 0s;
+      top: 50%;
+    }
+    &:hover .general-btn_none {
+      // opacity: 1;
+      display: block;
+    }
   }
   &__picture {
   }
   &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     position: absolute;
     top: 80%;
     left: 50%;

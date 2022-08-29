@@ -61,10 +61,37 @@
 .search-menu {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  width: 69%;
+  padding-bottom: 25px;
   &__row {
     display: flex;
+    column-gap: 10px;
   }
   &__item {
+    // width: 87px;
+    // height: 28px;
+    padding: 5px 14px;
+    background-color: #bdc8d9;
+    color: $whiteColor;
+
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+
+    border-radius: 30px;
+    // font-size: 14px;
+    @include adaptiv(14, 12);
+    font-weight: 700;
+    cursor: pointer;
+    &_active {
+      background-color: $accentColor;
+    }
+    &_bd {
+      background: none;
+      border: 2px solid #bdc8d9;
+      color: #bdc8d9;
+    }
   }
 }
 .city-card {

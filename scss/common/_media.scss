@@ -28,6 +28,10 @@
 }
 //------------------------------- MAX-WIDTH 990.98 tablets ----------//
 @media (max-width: $tablet) {
+  .search-menu {
+    width: 100%;
+    // justify-content: center;
+  }
   .city-card {
     &__item {
       width: 48%;
@@ -90,6 +94,9 @@
   .mobil-menu {
     display: block;
   }
+  .menu {
+    
+  }
   .intro {
     &__content {
       padding-top: 240px;
@@ -105,6 +112,13 @@
 }
 //------------------------------- MAX-WIDTH 575.98 portrait phones ---------------------//
 @media (max-width: 575.98px) {
+  .search-menu {
+    justify-content: center;
+    row-gap: 10px;
+    // &__row {
+    //   row-gap: 10px;
+    // }
+  }
   .intro {
     &__content {
       padding-top: 190px;

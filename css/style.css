@@ -208,6 +208,10 @@ fieldset {
   text-transform: uppercase;
 }
 
+.general-btn_none {
+  display: none;
+}
+
 .header {
   position: absolute;
   top: 0;
@@ -253,73 +257,50 @@ fieldset {
   display: none;
 }
 
-.mobil-menu input {
-  display: none;
-}
-
-label {
-  display: block;
+#nav-icon5 {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  transition-duration: 1s;
   cursor: pointer;
+}
+
+#nav-icon5 span {
+  height: 4px;
+  width: 40px;
+  background-color: #ffc74a;
+  border-radius: 20px;
   position: absolute;
-  width: 50vw;
-  height: 50vw;
+  transition-duration: .25s;
+  top: 18px;
 }
 
-@media (min-aspect-ratio: 1 / 1) {
-  label {
-    width: 50vh;
-    height: 50vh;
-  }
+#nav-icon5 span:before {
+  left: 0;
+  position: absolute;
+  top: -14px;
+  height: 4px;
+  width: 40px;
+  background-color: #ffc74a;
+  content: "";
+  border-radius: 20px;
+  transition-duration: .25s;
 }
 
-.menu--1 label {
-  bottom: 0;
-  right: 0;
+#nav-icon5 span:after {
+  left: 0;
+  position: absolute;
+  top: 14px;
+  height: 4px;
+  width: 40px;
+  background-color: #ffc74a;
+  content: "";
+  border-radius: 20px;
+  transition-duration: .25s;
 }
 
-path {
-  fill: none;
-  stroke: #ffffff;
-  stroke-width: 3;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  --length: 24;
-  --offset: -38;
-  stroke-dasharray: var(--length) var(--total-length);
-  stroke-dashoffset: var(--offset);
-  transition: all 0.8s cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-circle {
-  fill: #fff3;
-  opacity: 0;
-}
-
-.cross input:checked + svg .line--1,
-.cross input:checked + svg .line--3 {
-  --length: 22.627416998;
-}
-
-.cross input:checked + svg .line--2 {
-  --length: 0;
-}
-
-.menu--1 .line--1,
-.menu--1 .line--3 {
-  --total-length: 126.64183044433594;
-}
-
-.menu--1 .line--2 {
-  --total-length: 70;
-}
-
-.menu--1 input:checked + svg .line--1,
-.menu--1 input:checked + svg .line--3 {
-  --offset: -94.1149185097;
-}
-
-.menu--1 input:checked + svg .line--2 {
-  --offset: -50;
+#nav-icon5.open {
+  transform: rotateZ(450deg);
 }
 
 .intro {
@@ -412,10 +393,27 @@ circle {
 }
 
 .popular-places-col__item {
+  transition: transform 3s ease 0s;
   position: relative;
 }
 
+.popular-places-col__item:hover .popular-places-col__content .popular-places-col__title {
+  font-size: 48px;
+}
+
+.popular-places-col__item:hover .popular-places-col__content {
+  transition: transform 3s ease 0s;
+  top: 50%;
+}
+
+.popular-places-col__item:hover .general-btn_none {
+  display: block;
+}
+
 .popular-places-col__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
   top: 80%;
   left: 50%;
@@ -503,10 +501,47 @@ circle {
 .search-menu {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  width: 69%;
+  padding-bottom: 25px;
 }
 
 .search-menu__row {
   display: flex;
+  column-gap: 10px;
+}
+
+.search-menu__item {
+  padding: 5px 14px;
+  background-color: #bdc8d9;
+  color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .search-menu__item {
+    font-size: calc(12px + 3.4 * ((100vw - 320px) / 1920));
+  }
+}
+
+@media (min-width: 767px) {
+  .search-menu__item {
+    font-size: calc(12px + 2 * (100vw  / 1920));
+  }
+}
+
+.search-menu__item_active {
+  background-color: #ffc74a;
+}
+
+.search-menu__item_bd {
+  background: none;
+  border: 2px solid #bdc8d9;
+  color: #bdc8d9;
 }
 
 .city-card {
@@ -754,6 +789,9 @@ circle {
 }
 
 @media (max-width: 990.98px) {
+  .search-menu {
+    width: 100%;
+  }
   .city-card__item {
     width: 48%;
   }
@@ -784,6 +822,10 @@ circle {
 }
 
 @media (max-width: 575.98px) {
+  .search-menu {
+    justify-content: center;
+    row-gap: 10px;
+  }
   .intro__content {
     padding-top: 190px;
   }

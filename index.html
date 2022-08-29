@@ -5,8 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Polind</title>
-  <!-- <link rel="stylesheet" href="css/slick.css">
-  <link rel="stylesheet" href="css/slick-theme.css"> -->
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="img/header/favicon.ico">
 </head>
@@ -35,17 +35,9 @@
               </li>
             </ul>
           </nav>
-          <div class="menu mobil-menu cross menu--1">
-            <label>
-              <input type="checkbox">
-              <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="30"></circle>
-                <path class="line--1 line--debug" d="M0 40h62c13 0 6 28-4 18L35 35"></path><path class="line--1" d="M0 40h62c13 0 6 28-4 18L35 35"></path>
-                <path class="line--2 line--debug" d="M0 50h70"></path><path class="line--2" d="M0 50h70"></path>
-                <path class="line--3 line--debug" d="M0 60h62c13 0 6-28-4-18L35 65"></path><path class="line--3" d="M0 60h62c13 0 6-28-4-18L35 65"></path>
-              </svg>
-            </label>
-          </div>
+          <div id="nav-icon5" class="mobil-menu">
+            <span></span>
+          </div>			
         </div> 
       </div>      
     </header><!--/.header -->
@@ -76,6 +68,9 @@
               <div class="popular-places-col__content">
                 <h2 class="popular-places-col__title">Zakopane</h2>
                 <p class="popular-places-col__text">Małopolskie</p>
+                <div class="general-btn general-btn_none">
+                  <a href="#" class="general-btn__link">CHECK OFFERS</a>
+                </div>
               </div>
             </div>
             <div class="popular-places-col__item">
@@ -85,6 +80,9 @@
               <div class="popular-places-col__content">
                 <h2 class="popular-places-col__title">Sandomierz</h2>
                 <p class="popular-places-col__text">Swietokrzyskie</p>
+                <div class="general-btn general-btn_none">
+                  <a href="#" class="general-btn__link">CHECK OFFERS</a>
+                </div>
               </div>
             </div>
             <div class="popular-places-col__item">
@@ -94,7 +92,15 @@
               <div class="popular-places-col__content">
                 <h2 class="popular-places-col__title">Sopot</h2>
                 <p class="popular-places-col__text">Pomorskie</p>
+                <div class="general-btn general-btn_none">
+                  <a href="#" class="general-btn__link">CHECK OFFERS</a>
+                </div>
               </div>
+            </div>
+            <div class="popular-places-col__item">
+              <div class="popular-places-col__picture">
+                <img src="./img/categories/dark-right.jpg" alt="Dark right">
+              </div>            
             </div>
             <div class="popular-places-col__item">
               <div class="popular-places-col__picture">
@@ -115,14 +121,14 @@
               </form>
               <div class="search-menu">
                 <ul class="search-menu__row">
-                  <li class="search-menu__item">Journey</li>
+                  <li class="search-menu__item search-menu__item_active">Journey</li>
                   <li class="search-menu__item">Travelers</li>
                   <li class="search-menu__item">Guide</li>
                 </ul>
                 <ul class="search-menu__row">
-                  <li class="search-menu__item">Mazury</li>
-                  <li class="search-menu__item">Cracow</li>
-                  <li class="search-menu__item">Zakopane</li>
+                  <li class="search-menu__item search-menu__item_bd">Mazury</li>
+                  <li class="search-menu__item search-menu__item_bd">Cracow</li>
+                  <li class="search-menu__item search-menu__item_bd">Zakopane</li>
                 </ul>
               </div>
                <div class="city-card">
@@ -259,32 +265,15 @@
 
   <script src="./js/jquery-3.6.0.min.js"></script>
   <script>
-    Array.from(document.getElementsByTagName('path')).map(path => {
-  console.log(path.getTotalLength());
-  const debugPath = path.cloneNode();
-  debugPath.classList.add('line--debug');
-  if (path.parentNode) path.parentNode.insertBefore(debugPath.cloneNode(), path);
+
+$(function() {
+    $('#nav-icon5').click(function(){
+        $(this).toggleClass('open');
+    });
 });
-const debugCheckbox = document.getElementById('debug');
-debugCheckbox.addEventListener('change', () => {
-  if (debugCheckbox.checked) {
-    debugCheckbox.parentElement.classList.add('active');
-  } else {
-    debugCheckbox.parentElement.classList.remove('active');
-  }
-});
-let currentActive = 0;
-const checkboxes = document.querySelectorAll('.grid input');
-const autoShow = setInterval(() => {
-  checkboxes[currentActive % 4].checked = !checkboxes[currentActive % 4].checked;
-  if (!checkboxes[currentActive % 4].checked) currentActive += 1;
-}, 1000);
-document.querySelector('.grid').addEventListener('click', () => {
-  clearInterval(autoShow);
-})
   </script>
-  <!-- <script src="./js/slick.min.js"></script> -->
-  <!-- <script src="./js/main-slick.js"></script> -->
+  <script src="./js/slick.min.js"></script>
+  <script src="./js/main-slick.js"></script>
   <!-- <script src="./js/main.js"></script> -->
   <!-- <script src="./js/main-counter.js"></script> -->
   <!-- <script src="./js/main-filter.js"></script> -->

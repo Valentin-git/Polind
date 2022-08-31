@@ -804,6 +804,16 @@ fieldset {
 }
 
 @media (max-width: 767.98px) {
+  .top-bar {
+    padding: 20px 0;
+  }
+  .logo img {
+    width: 32px;
+  }
+  .logo__name {
+    margin-left: 15px;
+    font-size: 20px;
+  }
   .menu-nav {
     position: relative;
   }
@@ -812,6 +822,9 @@ fieldset {
   }
   .menu {
     display: none;
+  }
+  .menu__link {
+    font-size: 31px;
   }
   .menu.open {
     width: 100%;

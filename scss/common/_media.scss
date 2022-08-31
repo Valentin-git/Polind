@@ -88,6 +88,18 @@
 }
 //------------------------------- MAX-WIDTH 767.98 landscape phones ---------------------//
 @media (max-width: $mobile) {
+  .top-bar {
+    padding: 20px 0;
+  }
+  .logo {
+    img {
+      width: 32px;
+    }
+    &__name {
+      margin-left: 15px;
+      font-size: 20px;
+    }
+  } 
   .menu-nav {
     position: relative;
   }
@@ -96,6 +108,9 @@
   }
   .menu {
     display: none;
+    &__link {
+      font-size: 31px;
+    }
   }
   .menu.open {
     width: 100%;

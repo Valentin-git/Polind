@@ -23,7 +23,7 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 // Брейк-поинты
 $pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
 $tablet: 990.98px; // Планшеты, некоторые телефоны в горизонтальном положении
-$mobile: 767.98px; // Телефоны L
+$mobile: 768px; // Телефоны L
 $mobileSmall: 479.98px; // Телефоны S
 
 //

@@ -51,7 +51,7 @@
   cursor: pointer;
   span {
     height: 4px;
-    width: 40px;
+    width: 38px;
     background-color: $accentColor;
     border-radius: 20px;
     position: absolute;
@@ -60,9 +60,9 @@
     &:before {
       left: 0;
       position: absolute;
-      top: -14px;
+      top: -12px;
       height: 4px;
-      width: 40px;
+      width: 38px;
       background-color: $accentColor;
       content: "";
       border-radius: 20px;
@@ -71,9 +71,9 @@
     &:after {
       left: 0;
       position: absolute;
-      top: 14px;
+      top: 12px;
       height: 4px;
-      width: 40px;
+      width: 38px;
       background-color: $accentColor;
       content: "";
       border-radius: 20px;

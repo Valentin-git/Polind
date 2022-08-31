@@ -28,6 +28,9 @@
 }
 //------------------------------- MAX-WIDTH 990.98 tablets ----------//
 @media (max-width: $tablet) {
+  .popular-places {
+    transform: translate(0, 41%);
+  }
   .search-menu {
     width: 100%;
     // justify-content: center;
@@ -109,7 +112,7 @@
   .menu {
     display: none;
     &__link {
-      font-size: 31px;
+      font-size: 36px;
     }
   }
   .menu.open {
@@ -129,6 +132,11 @@
   .intro {
     &__content {
       padding-top: 240px;
+    }
+  }
+  .general-btn {
+    &__link {
+      padding: 14px 25px;
     }
   }
 }

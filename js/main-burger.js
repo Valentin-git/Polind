@@ -12,7 +12,8 @@ mobilMenu.onclick = function() {
 };
 
 // dococument.addEventListener('click', function(e) {
-//     if (!e.target.closest('.menu')) {
-//         menuBurger.classList.remove('open');
+//     if (!e.target.closest('.mobil-menu')) {
+//         mobilMenu.classList.remove('open');
+//         menu.classList.remove('open');
 //     }
 // });

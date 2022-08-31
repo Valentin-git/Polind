@@ -805,10 +805,25 @@ fieldset {
 
 @media (max-width: 767.98px) {
   .menu-nav {
-    display: none;
+    position: relative;
   }
   .mobil-menu {
     display: block;
+  }
+  .menu {
+    display: none;
+  }
+  .menu.open {
+    width: 100%;
+    height: 100vh;
+    background: #ed6950;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .intro__content {
     padding-top: 240px;

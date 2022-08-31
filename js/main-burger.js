@@ -1,13 +1,18 @@
-const menu = document.querySelector('.menu-nav');
-const menuBurger = document.querySelector('.menu');
-const menuBtn = document.querySelector('.mobil-menu');
+// const menuNav = document.querySelector('.menu-nav');
+const menu = document.querySelector('.menu');
+const mobilMenu = document.querySelector('.mobil-menu');
+// const burgerMenu = document.querySelector('.burger-menu');
 
-menuBtn.onclick = function() {
-    menuBurger.classList.toggle('open');
+
+
+
+mobilMenu.onclick = function() {
+  mobilMenu.classList.toggle('open');
+  menu.classList.toggle('open');
 };
 
-dococument.addEventListener('click', function(e) {
-    if (!e.target.closest('.menu')) {
-        menuBurger.classList.remove('open');
-    }
-});
+// dococument.addEventListener('click', function(e) {
+//     if (!e.target.closest('.menu')) {
+//         menuBurger.classList.remove('open');
+//     }
+// });

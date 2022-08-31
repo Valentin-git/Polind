@@ -257,7 +257,7 @@ fieldset {
   display: none;
 }
 
-#nav-icon5 {
+.mobil-menu {
   width: 40px;
   height: 40px;
   position: relative;
@@ -265,7 +265,7 @@ fieldset {
   cursor: pointer;
 }
 
-#nav-icon5 span {
+.mobil-menu span {
   height: 4px;
   width: 40px;
   background-color: #ffc74a;
@@ -275,7 +275,7 @@ fieldset {
   top: 18px;
 }
 
-#nav-icon5 span:before {
+.mobil-menu span:before {
   left: 0;
   position: absolute;
   top: -14px;
@@ -287,7 +287,7 @@ fieldset {
   transition-duration: .25s;
 }
 
-#nav-icon5 span:after {
+.mobil-menu span:after {
   left: 0;
   position: absolute;
   top: 14px;
@@ -299,7 +299,7 @@ fieldset {
   transition-duration: .25s;
 }
 
-#nav-icon5.open {
+.mobil-menu.open {
   transform: rotateZ(450deg);
 }
 
